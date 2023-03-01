@@ -1,0 +1,14 @@
+<form method="post">
+    <label for="album_name">Album Name:</label>
+    <select name="album" id="album">
+        {% for album_id, name in aid_options %}
+          <option value="{{ album_id }}">{{ name }}</option>
+        {% endfor %}
+      </select>
+    <input type="submit" value="View">
+</form>
+
+{% if login is none %}
+{% else %}
+<button type="button" onclick="location.href='/remove_album'">Delete an Album</button>
+{% endif %}

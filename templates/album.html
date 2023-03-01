@@ -1,0 +1,20 @@
+<!doctype html>
+
+{% if photos %}
+    <ul>
+    {% for photo in photos %}
+
+        <li>{{photo[2]}}<br>
+          <img src='data:image/jpg;base64, {{ base64.b64encode(photo[0]).decode("ascii") }}'/>
+        </li>
+        <li><a href="/leaving_comments/{{ photo[1] }}">Leave a comment</a></li>
+    {% endfor %}
+    </ul>
+{%else%}
+<p>Album is empty!</p>
+{% endif %}
+
+
+
+
+

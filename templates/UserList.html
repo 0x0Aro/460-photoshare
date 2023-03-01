@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<h1>Select a user that you want to view album on:</h1>
+</head>
+<body>
+	<ul>
+	{% for user in Users %}
+		<li><a href="/album/{{ user[0] }}">{{ user[1] }}</a></li>
+	{% endfor %}
+	</ul>
+</body>
+</html>

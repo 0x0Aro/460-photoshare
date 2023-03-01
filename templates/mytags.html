@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<h1>{{message}}:</h1>
+</head>
+<body>
+	<ul>
+	{% for tag in Tags %}
+		<li><a href="/myTagPic/{{tag}}">{{tag}}</a></li>
+	{% endfor %}
+	</ul>
+</body>
+</html>

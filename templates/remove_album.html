@@ -1,0 +1,17 @@
+<head>
+    <title>Select an album to remove</title>
+</head>
+    <body>
+        <div class="title">
+            <h1>ALL PHOTOS IN REMOVED ALBUM WILL BE DELETED!</h1>
+        </div>
+            <form method="post" enctype="multipart/form-data" action="/remove_album">
+                <label for="album">Album:</label>
+                <select name="album" id="album">
+                    {% for album_id, name in aid_options %}
+                      <option value="{{ album_id }}">{{ name }}</option>
+                    {% endfor %}
+                  </select>
+                <input type="submit" value="DELETE" />
+            </form>
+    </body>
